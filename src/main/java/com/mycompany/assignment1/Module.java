@@ -26,11 +26,21 @@ public class Module
         this.moduleName = name;
         this.moduleID = id;
     }
+    
     //setters 
-    public void StudentReg(Student r)
+    public void StudentReg(Student s)
     {
-        students.add(r);
+        students.add(s);
     }
+    public void setMod(String name)
+    {
+        this.moduleName = name;
+    }
+    public void setId(String id)
+    {
+        this.moduleID = id;
+    }
+    
     //getters
     public String getModName()
     {
@@ -44,4 +54,16 @@ public class Module
     {
         return students;
     }
+    
+    @Override
+    public String toString()
+    {
+        String str = "Module: " + this.moduleName + " ID: " + this.moduleID + "\n";
+        for (Student s : students)
+        {
+            str += "  " + s + "\n";
+        }
+        return str;
+    }
+    
 }

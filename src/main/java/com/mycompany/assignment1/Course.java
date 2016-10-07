@@ -35,26 +35,50 @@ public class Course
     {
         this.mod = modules;
     }   
+    public void setCourse(String name)
+    {
+        this.courseName = name;
+    }
+    public void setStart(DateTime Start)
+    {
+        this.Start = Start;
+    }
+    public void setEnd(DateTime end)
+    {
+        this.End = end;
+    }
+    
     //add Module
     public void addMod(Module m)
     {
         mod.add(m);
     }   
     //getters
-    private String getCourse()
+    public String getCourse()
     {
         return courseName;
     }
-    private DateTime getend()
+    public DateTime getend()
     {
         return End;
     }
-    private DateTime getStart()
+    public DateTime getStart()
     {
         return Start;
     }
-    private ArrayList<Module> getMod()
+    public ArrayList<Module> getMod()
     {
         return mod;
+    }
+    
+    @Override
+    public String toString()
+    {
+        String str = "Programme Name: " + this.courseName + " Start date: " + this.Start + " End Date: " + this.End + "\n";
+        for (Module m : mod)
+        {
+            str += "  " + m + "\n";
+        }
+        return str;
     }
 }

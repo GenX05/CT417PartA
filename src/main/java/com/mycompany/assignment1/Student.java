@@ -34,10 +34,23 @@ public class Student
         this.id = this.studentID;
     }
     //Setters
-    private void setUserName()
+    public void setUserName()
     {
         this.Username = this.Name + this.Age;
     }
+    public void setName(String name)
+    {
+        this.Name = name;
+    }
+    public void setAge(String age)
+    {
+        this.Age = age;
+    }
+    public void setDob(DateTime dob)
+    {
+        this.DOB = dob;
+    }
+    
     //Getters		
     public String getName()
     {
@@ -54,5 +67,12 @@ public class Student
     public String getUser()
     {
         return this.Username;
+    }
+    
+    @Override
+    public String toString()
+    {
+        String str = "Student Name: " + this.Name + " Age: " + this.Age + " Date of birth: " + this.DOB + " Student ID: " + this.id;
+        return str;
     }
 }
