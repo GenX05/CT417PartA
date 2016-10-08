@@ -19,7 +19,7 @@ public class Module
     //decalre Variables 
     private String moduleName;
     private String moduleID;
-    private ArrayList<Student> students = new ArrayList<Student>();
+    private ArrayList<Student> students = new ArrayList<>();
     
     public Module(String name,String id)
     {

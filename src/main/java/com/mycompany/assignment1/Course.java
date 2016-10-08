@@ -74,10 +74,10 @@ public class Course
     @Override
     public String toString()
     {
-        String str = "Programme Name: " + this.courseName + " Start date: " + this.Start + " End Date: " + this.End + "\n";
+        String str = "Course Name: " + this.courseName + " Start date: " + this.Start + " End Date: " + this.End + "\n";
         for (Module m : mod)
         {
-            str += "  " + m + "\n";
+            str += " \n" + m + "\n";
         }
         return str;
     }
