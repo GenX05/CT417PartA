@@ -28,7 +28,7 @@ public class Course
     {
         this.courseName = name;
         this.Start = start;
-        this.End = end;
+        this.End = end.plusYears(4); //based on a four year Course from todays date.
     }
     //setters
     public void setModules(ArrayList<Module> modules)
@@ -53,6 +53,7 @@ public class Course
     {
         mod.add(m);
     }   
+    
     //getters
     public String getCourse()
     {
@@ -70,11 +71,11 @@ public class Course
     {
         return mod;
     }
-    
+    // Override toString method
     @Override
     public String toString()
     {
-        String str = "Course Name: " + this.courseName + " Start date: " + this.Start + " End Date: " + this.End + "\n";
+        String str = " Course Name: " + this.courseName + "\n Start date: " + this.Start + "\n End Date: " + this.End + "\n";
         for (Module m : mod)
         {
             str += " \n" + m + "\n";

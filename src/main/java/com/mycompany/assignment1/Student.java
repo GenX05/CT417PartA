@@ -22,16 +22,16 @@ public class Student
     public String Age;
     public DateTime DOB;
     public String Username;
-    public int id;
-    static int studentID = 1617000;
+    public int year;
+    public int studentID = 1617000;//ststic student ID number
     //constrcutor
     public Student(String name, String age, DateTime dob)
     {
         this.Name = name;
         this.Age = age;
-        this.DOB = dob;       
+        year = Integer.parseInt(age);
+        this.DOB = dob.minusYears(year);       
         this.setUserName();
-        this.id = this.studentID;
     }
     //Setters
     public void setUserName()
@@ -40,7 +40,7 @@ public class Student
     }
     public void setName(String name)
     {
-        this.Name = name;
+        this.Name = name;  
     }
     public void setAge(String age)
     {
@@ -48,7 +48,7 @@ public class Student
     }
     public void setDob(DateTime dob)
     {
-        this.DOB = dob;
+        this.DOB = dob.minusYears(year);
     }
     
     //Getters		
@@ -68,11 +68,11 @@ public class Student
     {
         return this.Username;
     }
-    
+    // Override toString method
     @Override
     public String toString()
     {
-        String str = "Student Name: " + this.Name + " Age: " + this.Age + " Date of birth: " + this.DOB + " Student ID: " + this.id;
+        String str = " Student Name: " +  this.Name + "\n Student ID: " + this.studentID + "\n Username: " + this.Username + " \n Age: " + this.Age + "\n Date of birth: " + this.DOB + "\n";
         return str;
     }
 }

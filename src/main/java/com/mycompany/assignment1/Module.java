@@ -54,14 +54,14 @@ public class Module
     {
         return students;
     }
-    
+    // Override toString method
     @Override
     public String toString()
     {
         String str = "Module: " + this.moduleName + " ID: " + this.moduleID + "\n";
         for (Student s : students)
         {
-            str += "  " + s + "\n";
+            str += s + "\n";
         }
         return str;
     }

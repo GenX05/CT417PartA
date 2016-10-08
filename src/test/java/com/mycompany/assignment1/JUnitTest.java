@@ -26,6 +26,6 @@ public class JUnitTest {
         DateTime dt = new DateTime();        
         Student std = new Student("john","17",dt);
         String username =std.Username;
-        assertEquals("john10", username);
+        assertEquals("john17", username);
     }
 }
